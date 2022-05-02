@@ -36,8 +36,6 @@ class BinarySearchTree {
      } else 
        node.right = addWithin (node.right, data)
        return node
-  
-
    }
   }
 
@@ -70,13 +68,13 @@ class BinarySearchTree {
         return node;
       }
 
-      return data < node.data ? findNode (node.left) : findNode (node.right, data)
+      return data < node.data ? findNode (node.left, data) : findNode (node.right, data)
 
     }
   }
 
   remove(data) {
-    this.root = removeNode (this.rootValue, data)
+    this.rootValue = removeNode (this.rootValue, data)
 
     function removeNode (node, data) {
 
@@ -120,7 +118,7 @@ class BinarySearchTree {
   min() {
 
     if (!this.rootValue) {
-      return 
+      return null
     }
 
     let node = this.node
@@ -134,7 +132,7 @@ class BinarySearchTree {
 
   max() {
     if (!this.rootValue) {
-      return 
+      return null
     }
 
     let node = this.node
