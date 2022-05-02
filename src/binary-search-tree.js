@@ -121,7 +121,7 @@ class BinarySearchTree {
       return null
     }
 
-    let node = this.node
+    let node = this.rootValue
 
     while (node.left) {
       node = node.left
@@ -135,7 +135,7 @@ class BinarySearchTree {
       return null
     }
 
-    let node = this.node
+    let node = this.rootValue
 
     while (node.right) {
       node = node.right
